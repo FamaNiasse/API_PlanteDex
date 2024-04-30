@@ -3,7 +3,15 @@ import appDataSource from "../data-source";
 import { User } from "../models/entities/UserEntity";
 
 export class UserService {
+
+
     private userRepository = appDataSource.getRepository(User)
+
+    async getAll(){
+        console.log("UserService");
+        return this.userRepository.find();
+
+    }
 
     async signup (pseudo : string, email : string, password : string ) {
         console.log("UserService");
@@ -13,10 +21,13 @@ export class UserService {
         const newUser = this.userRepository.create({
             pseudo: pseudo,
             email: email,
-            password: hashedPassword
+            password: hashedPassword,
+            role: 2
         });
+        console.log("test new user", newUser);
+        
 
-        return await this.userRepository.softRemove(newUser);
+        return await this.userRepository.save(newUser);
     }
     
 

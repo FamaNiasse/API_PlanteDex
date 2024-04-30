@@ -1,10 +1,14 @@
-import appDataSource from "../data-source";
+import AppDataSource from "../data-source";
+import { Plante } from "../models/entities/PlanteEntity";
+
 
 class PlanteService{
+
+    private planteRepository = AppDataSource.getRepository(Plante)
+
     async getAll(){
         console.log("PlanteService");
-        return appDataSource.query("SELECT * FROM plant;");
-        // Une requète SQL termine par un ;
+        return this.planteRepository.find();
 
     }
 }

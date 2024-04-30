@@ -4,21 +4,21 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 export class User {
  
   @PrimaryGeneratedColumn()
-  id: number;
+  id?: number;
 
   @Column({nullable : false})
-  pseudo: string;
+  pseudo?: string;
 
   @Column({nullable : false})
-  email: string;
+  email?: string;
 
   @Column({nullable : false})
-  password: string;
+  password?: string;
   
   @Column({nullable: false})
-  role: number;
+  role?: number;
 
   @Column({nullable: true})
-  token: string;
+  token?: string;
 
 }
