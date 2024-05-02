@@ -13,7 +13,7 @@ export class UserController {
     }
 
     async signup(req: Request, res: Response) {
-        console.log("UserController");
+        console.log("UserControllerSignup");
         const { pseudo, email, password} = req.body;
 
         const createUser = await this.userService.signup(pseudo, email, password);
@@ -26,5 +26,17 @@ console.log("test Fama", createUser);
         }
     }
 
+    async login(req: Request, res: Response) {
+        console.log("UserControllerLogin");
+        const { email, password} = req.body;
+        const token = await this.userService.login(email, password);
+        
 
+        if(token) {
+            res.status(200).json({ token : token });
+           
+        }else{
+            res.status(401).json({message: "Failed login"})
+        }     
+    };
 }
