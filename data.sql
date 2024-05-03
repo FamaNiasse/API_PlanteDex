@@ -2,7 +2,7 @@ INSERT INTO "user" (pseudo, email, password, role) VALUES
 ('admin', 'admin@test.com', 'admin', 1),
 ('famita', 'famita@test.com', 'famita', 2);
 
-INSERT INTO plant (id, nom, soleil, arrosage, categorie, image) VALUES 
+INSERT INTO plante (id, nom, soleil, arrosage, categorie, image) VALUES 
 (
 952438,
 'Anthurium, pot D12cm',

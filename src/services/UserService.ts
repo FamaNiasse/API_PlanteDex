@@ -23,7 +23,7 @@ export class UserService {
             pseudo: pseudo,
             email: email,
             password: hashedPassword,
-            role: 2
+            role: 1
         });
         console.log("test new user", newUser);
         

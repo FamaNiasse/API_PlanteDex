@@ -3,7 +3,7 @@ CREATE DATABASE plantdex_bdd;
 DROP TABLE IF EXISTS plant CASCADE; 
 DROP TABLE IF EXISTS "user" CASCADE; 
 
-CREATE TABLE plant (id int PRIMARY KEY, 
+CREATE TABLE plante (id int PRIMARY KEY, 
 nom varchar(255) NOT NULL, 
 soleil varchar(50) not NULL,
 arrosage int not NULL, 

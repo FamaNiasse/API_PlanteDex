@@ -17,7 +17,7 @@ export class UserController {
         const { pseudo, email, password} = req.body;
 
         const createUser = await this.userService.signup(pseudo, email, password);
-console.log("test Fama", createUser);
+console.log("test create user", createUser);
 
         if (createUser) {
             res.status(201).json({message: "User created"});  
@@ -39,4 +39,5 @@ console.log("test Fama", createUser);
             res.status(401).json({message: "Failed login"})
         }     
     };
+
 }
