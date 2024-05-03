@@ -1,6 +1,6 @@
 import { Router } from "express";
 import PlanteController from "../controllers/PlanteController";
-import { log } from "console";
+
 
 
 

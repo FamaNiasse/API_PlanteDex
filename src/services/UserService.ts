@@ -55,8 +55,6 @@ export class UserService {
         );
 
         console.log("Tokentestlogin", token);
-        // user.token = token;
-        // this.userRepository.save(user);
 
         return token;
     }

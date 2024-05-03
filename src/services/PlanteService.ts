@@ -15,8 +15,6 @@ class PlanteService{
     //READ ONE
 
     async getById(id: number){
-        console.log("PlanteServiceById");
-         //return AppDataSource.query(`SELECT * FROM plant where id = ${id}`);
         return this.planteRepository.findOneBy({id: id});
 
     }
